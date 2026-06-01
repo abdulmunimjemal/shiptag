@@ -1,5 +1,5 @@
 /**
- * shipcard — the SVG card renderer.
+ * shiptag — the SVG card renderer.
  *
  * `renderCard` is a pure function: given normalized repo data it returns a
  * standalone, self-contained SVG string. No I/O, no network, no globals — which
@@ -18,7 +18,7 @@ export interface CardLanguage {
 
 /** Normalized repo data the card is rendered from. */
 export interface CardData {
-  /** Repository name, e.g. "shipcard". */
+  /** Repository name, e.g. "shiptag". */
   name: string;
   /** Owner / org, e.g. "abdulmunimjemal". */
   owner: string;

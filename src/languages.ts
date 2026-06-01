@@ -1,5 +1,5 @@
 /**
- * shipcard — language metadata.
+ * shiptag — language metadata.
  *
  * A small embedded map of common languages to their canonical colors (the same
  * palette GitHub uses for its language bars) plus file-extension → language

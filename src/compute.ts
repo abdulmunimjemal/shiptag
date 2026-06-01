@@ -1,5 +1,5 @@
 /**
- * shipcard — language breakdown computation.
+ * shiptag — language breakdown computation.
  *
  * Pure helpers that turn raw byte/count maps (from the GitHub languages API or
  * a local file scan) into the normalized, color-tagged, percentage-bearing

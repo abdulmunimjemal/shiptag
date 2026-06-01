@@ -1,5 +1,5 @@
 /**
- * shipcard — optional AI one-line summary.
+ * shiptag — optional AI one-line summary.
  *
  * OFF by default. When `--summary` is passed, this asks an OpenAI-compatible
  * chat completions endpoint for a single punchy line describing the repo,

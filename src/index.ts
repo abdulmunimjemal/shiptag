@@ -1,5 +1,5 @@
 /**
- * shipcard — generate a beautiful, shareable SVG card for any repository.
+ * shiptag — generate a beautiful, shareable SVG card for any repository.
  *
  * Public library API. The renderer ({@link renderCard}) and the language
  * computation are pure; the GitHub, local, and summary data sources are kept

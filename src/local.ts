@@ -1,5 +1,5 @@
 /**
- * shipcard — local (offline) data source.
+ * shiptag — local (offline) data source.
  *
  * Builds {@link CardData} for a directory with no network access: name and
  * description come from `package.json`, owner/name fall back to the git

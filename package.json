@@ -1,5 +1,5 @@
 {
-  "name": "shipcard",
+  "name": "shiptag",
   "version": "0.1.0",
   "description": "Generate a beautiful, shareable SVG card for any repository.",
   "keywords": [
@@ -13,7 +13,7 @@
   ],
   "type": "module",
   "bin": {
-    "shipcard": "./dist/cli.js"
+    "shiptag": "./dist/cli.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -38,11 +38,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abdulmunimjemal/shipcard.git"
+    "url": "git+https://github.com/abdulmunimjemal/shiptag.git"
   },
-  "homepage": "https://oss.munim.io/shipcard/",
+  "homepage": "https://oss.munim.io/shiptag/",
   "bugs": {
-    "url": "https://github.com/abdulmunimjemal/shipcard/issues"
+    "url": "https://github.com/abdulmunimjemal/shiptag/issues"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

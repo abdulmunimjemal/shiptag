@@ -1,10 +1,10 @@
-# shipcard
+# shiptag
 
 Generate a beautiful, shareable **SVG card** for any repository — name,
 description, primary languages (with a colored language bar), stars/forks, and
 owner. Perfect for social previews (Open Graph) and README headers.
 
-![shipcard example card](./examples/shipcard.svg)
+![shiptag example card](./examples/shiptag.svg)
 
 - **Pure, well-tested renderer** — `renderCard(data)` returns a standalone SVG.
 - **Two modes** — fetch from GitHub, or build entirely offline from a local repo.
@@ -13,9 +13,9 @@ owner. Perfect for social previews (Open Graph) and README headers.
 ## Install
 
 ```sh
-npm install -g shipcard
+npm install -g shiptag
 # or run without installing:
-npx shipcard <owner/repo>
+npx shiptag <owner/repo>
 ```
 
 Requires Node.js >= 18.
@@ -27,13 +27,13 @@ Requires Node.js >= 18.
 Fetch repo metadata and the language breakdown from the GitHub REST API:
 
 ```sh
-shipcard abdulmunimjemal/shipcard -o card.svg
+shiptag abdulmunimjemal/shiptag -o card.svg
 ```
 
 Set `GITHUB_TOKEN` to lift the unauthenticated rate limit (optional):
 
 ```sh
-GITHUB_TOKEN=ghp_xxx shipcard facebook/react -o react.svg
+GITHUB_TOKEN=ghp_xxx shiptag facebook/react -o react.svg
 ```
 
 ### Local mode (offline, no network)
@@ -44,8 +44,8 @@ breakdown by scanning file extensions (skipping `node_modules`, `.git`,
 `dist`, etc.):
 
 ```sh
-shipcard --local .                 # current directory, SVG to stdout
-shipcard --local ../my-project -o my-project.svg
+shiptag --local .                 # current directory, SVG to stdout
+shiptag --local ../my-project -o my-project.svg
 ```
 
 ### Options
@@ -65,14 +65,14 @@ Exit codes: `0` ok, `1` fetch error, `2` usage error.
 
 ### AI summary (optional, off by default)
 
-With `--summary`, shipcard asks an OpenAI-compatible chat endpoint for a single
+With `--summary`, shiptag asks an OpenAI-compatible chat endpoint for a single
 punchy line describing the repo, using your own `OPENAI_API_KEY`. Without the
 flag, the card uses the repo description and makes **no** AI calls.
 
 ```sh
-OPENAI_API_KEY=sk-xxx shipcard abdulmunimjemal/shipcard --summary -o card.svg
+OPENAI_API_KEY=sk-xxx shiptag abdulmunimjemal/shiptag --summary -o card.svg
 # point at any OpenAI-compatible API:
-shipcard owner/repo --summary --base-url https://my-gateway.example/v1
+shiptag owner/repo --summary --base-url https://my-gateway.example/v1
 ```
 
 ## Programmatic API
@@ -80,10 +80,10 @@ shipcard owner/repo --summary --base-url https://my-gateway.example/v1
 `renderCard` is a pure function and is exported for direct use:
 
 ```ts
-import { renderCard, computeLanguages } from "shipcard";
+import { renderCard, computeLanguages } from "shiptag";
 
 const svg = renderCard({
-  name: "shipcard",
+  name: "shiptag",
   owner: "abdulmunimjemal",
   description: "Generate a beautiful, shareable SVG card for any repository.",
   languages: computeLanguages({ TypeScript: 9200, JavaScript: 600 }),

@@ -1,5 +1,5 @@
 /**
- * shipcard — GitHub data source.
+ * shiptag — GitHub data source.
  *
  * Fetches repo metadata and the language breakdown from the GitHub REST API
  * using the global `fetch`. Network access is confined to this module so the
@@ -31,7 +31,7 @@ interface RepoResponse {
 function authHeaders(token?: string): Record<string, string> {
   const headers: Record<string, string> = {
     Accept: "application/vnd.github+json",
-    "User-Agent": "shipcard",
+    "User-Agent": "shiptag",
   };
   const t = token ?? process.env.GITHUB_TOKEN;
   if (t) headers.Authorization = `Bearer ${t}`;

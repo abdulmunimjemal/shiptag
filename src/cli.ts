@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * shipcard CLI — generate a beautiful, shareable SVG card for any repository.
+ * shiptag CLI — generate a beautiful, shareable SVG card for any repository.
  *
  * Usage:
- *   shipcard owner/repo                 GitHub mode (network)
- *   shipcard --local [path]             local mode (offline)
- *   shipcard owner/repo -o card.svg     write to a file
+ *   shiptag owner/repo                 GitHub mode (network)
+ *   shiptag --local [path]             local mode (offline)
+ *   shiptag owner/repo -o card.svg     write to a file
  *
  * Exit codes: 0 ok, 1 fetch/network error, 2 usage error.
  */
@@ -27,11 +27,11 @@ import {
 
 const VERSION = "0.1.0";
 
-const HELP = `shipcard — a beautiful, shareable SVG card for any repository
+const HELP = `shiptag — a beautiful, shareable SVG card for any repository
 
 Usage:
-  shipcard <owner/repo> [options]      Fetch repo metadata from GitHub
-  shipcard --local [path] [options]    Build from a local repo (offline)
+  shiptag <owner/repo> [options]      Fetch repo metadata from GitHub
+  shiptag --local [path] [options]    Build from a local repo (offline)
 
 Options:
   -o, --out <file>     Write the SVG to <file> (default: stdout).
